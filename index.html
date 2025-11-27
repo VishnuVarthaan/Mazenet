@@ -1,40 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyShop – Home</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoDelight – Premium Handmade Chocolates</title>
+    <link rel="stylesheet" href="styles.css">
 
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #fff; }
 
-<!-- Google Analytics (replace G-XXXXXXX) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX');
-</script>
+        /* NAVBAR */
+        header {
+            background: #2b2b2b;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        header h1 { margin: 0; font-size: 24px; letter-spacing: 1px; }
+        nav a {
+            color: #fff;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #ff6600; }
+
+        /* HERO SECTION */
+        .hero {
+            height: 500px;
+            background: url("https://images.unsplash.com/photo-1589710751293-7dfae6f0f40a?auto=format&fit=crop&w=1000&q=80")
+                        center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 60px;
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+        .hero-text h2 {
+            font-size: 44px;
+            max-width: 450px;
+            margin-bottom: 10px;
+        }
+        .hero-text p { font-size: 18px; max-width: 400px; margin-bottom: 20px; }
+        .btn {
+            background: #ff6600;
+            padding: 12px 22px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #e05600; }
+
+        /* FEATURED PRODUCTS */
+        .feature-section {
+            padding: 50px 30px;
+            text-align: center;
+        }
+        .feature-section h2 { font-size: 32px; margin-bottom: 10px; }
+        .product-grid {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 18px;
+            transition: 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .product-card img { width: 100%; border-radius: 10px; }
+        .price {
+            display: block;
+            margin: 8px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* ABOUT PREVIEW */
+        .about-preview {
+            background: #f8f8f8;
+            padding: 60px 30px;
+            text-align: center;
+        }
+        .about-preview h2 { font-size: 30px; }
+        .about-preview p {
+            max-width: 700px;
+            margin: auto;
+            margin-top: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 60px 30px;
+            text-align: center;
+        }
+        .test-grid {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .test-card {
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            font-style: italic;
+        }
+        .test-card h4 { margin-top: 10px; font-style: normal; }
+
+        /* FOOTER */
+        footer {
+            background: #2b2b2b;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
+
+<!-- NAVBAR -->
 <header>
-<h1 class="logo">MyShop</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="about.html">About</a>
-</nav>
+    <h1>ChocoDelight</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="payment.html">Payment</a>
+    </nav>
 </header>
 
-
+<!-- HERO -->
 <section class="hero">
-<h2>Welcome to MyShop</h2>
-<p>A simple e‑commerce demo website built with HTML/CSS.</p>
-<a href="products.html" class="btn">View Products</a>
+    <div class="hero-text">
+        <h2>Handcrafted Chocolates Made With Love</h2>
+        <p>Premium Belgian cocoa blended with rich flavors for an unforgettable taste.</p>
+        <a href="products.html" class="btn">Shop Now</a>
+    </div>
 </section>
 
+<!-- FEATURED PRODUCTS -->
+<section class="feature-section">
+    <h2>Our Best Sellers</h2>
+    <p>Experience pure indulgence with our customer favorites.</p>
 
-<footer>© 2025 MyShop</footer>
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/270x200" alt="Chocolate">
+            <h3>Hazelnut Truffle Pack</h3>
+            <span class="price">₹649</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/270x200" alt="Chocolate">
+            <h3>Dark Cocoa Premium</h3>
+            <span class="price">₹499</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/270x200" alt="Chocolate">
+            <h3>Luxury Gift Box (16 pcs)</h3>
+            <span class="price">₹899</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="about-preview">
+    <h2>Why Choose ChocoDelight?</h2>
+    <p>
+        We are dedicated to bringing you world-class handcrafted chocolates made 
+        from premium ingredients sourced globally. Our chocolates are fresh, rich, 
+        and crafted with precision by expert chocolatiers.
+    </p>
+    <br>
+    <a href="about.html" class="btn">Learn More</a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+
+    <div class="test-grid">
+        <div class="test-card">
+            "Absolutely the best chocolates I’ve ever tasted. Smooth, rich and perfect!"
+            <h4>— Sneha R.</h4>
+        </div>
+
+        <div class="test-card">
+            "The gift box was amazing! Beautiful packaging and delicious chocolates."
+            <h4>— Arjun P.</h4>
+        </div>
+
+        <div class="test-card">
+            "Perfect balance of flavors. Highly recommend the Hazelnut Truffles."
+            <h4>— Divya K.</h4>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 ChocoDelight – All Rights Reserved
+</footer>
+
 </body>
 </html>
-
