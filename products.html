@@ -1,53 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products – MyShop</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – ChocoDelight Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #2b2b2b; padding: 15px; color: #fff; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .products { padding: 40px; text-align: center; }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+            border: 1px solid #ddd;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            width: 100%; border-radius: 10px; margin-bottom: 15px;
+        }
+        .price { display: block; font-size: 18px; margin: 10px 0; font-weight: bold; }
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #e65c00; }
+    </style>
 </head>
 <body>
+
 <header>
-<h1 class="logo">MyShop</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="about.html">About</a>
-</nav>
+    <h1>ChocoDelight – Products</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="payment.html">Payment</a>
+    </nav>
 </header>
 
+<section class="products">
+    <h2>Our Best Selling Chocolates</h2>
 
-<main class="content">
-<h2>Products</h2>
+    <div class="product-grid">
 
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Dark Chocolate">
+            <h3>Premium Dark Chocolate</h3>
+            <p>Made from 75% pure cocoa for rich taste.</p>
+            <span class="price">₹499</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
-<div class="grid">
-<div class="card">
-<img src="https://picsum.photos/seed/p1/400/250" />
-<h3>Aurora Headphones</h3>
-<p>$79.99</p>
-<a href="payment.html" class="btn-sm">Buy Now</a>
-</div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Gift Box">
+            <h3>Luxury Gift Box</h3>
+            <p>16 handcrafted chocolates in a premium box.</p>
+            <span class="price">₹899</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Hazelnut Truffle">
+            <h3>Hazelnut Truffle Pack</h3>
+            <p>Soft and creamy truffles filled with hazelnut.</p>
+            <span class="price">₹649</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
-<div class="card">
-<img src="https://picsum.photos/seed/p2/400/250" />
-<h3>Nebula Backpack</h3>
-<p>$49.50</p>
-<a href="payment.html" class="btn-sm">Buy Now</a>
-</div>
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Fruit & Nut">
+            <h3>Fruit & Nut Delight</h3>
+            <p>Loaded with raisins, cashews and almonds.</p>
+            <span class="price">₹399</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Caramel Bites">
+            <h3>Caramel Crunch Bites</h3>
+            <p>Caramel-filled chocolate with crispy coating.</p>
+            <span class="price">₹299</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
-<div class="card">
-<img src="https://picsum.photos/seed/p3/400/250" />
-<h3>Comet Smartwatch</h3>
-<p>$129.00</p>
-<a href="payment.html" class="btn-sm">Buy Now</a>
-</div>
-</div>
-</main>
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="White Chocolate">
+            <h3>Classic White Chocolate</h3>
+            <p>Milky and creamy smooth white chocolate.</p>
+            <span class="price">₹349</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
+        <!-- Product 7 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Almond Bar">
+            <h3>Almond Crunch Bar</h3>
+            <p>Loaded with roasted almond chunks.</p>
+            <span class="price">₹449</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
 
-<footer>© 2025 MyShop</footer>
+        <!-- Product 8 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x220" alt="Belgian Chocolate">
+            <h3>Belgian Cocoa Premium</h3>
+            <p>Imported Belgian chocolate handcrafted fresh.</p>
+            <span class="price">₹999</span>
+            <a href="payment.html" class="btn">Buy Now</a>
+        </div>
+
+    </div>
+</section>
+
 </body>
 </html>
