@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBX581MDNS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QBX581MDNS');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WB6FV24T');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You – ChocoDelight</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff7ec;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 80px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+        color: #D35400;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #444;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .details-box {
+        margin-top: 25px;
+        text-align: left;
+        padding: 20px;
+        background: #fff3e0;
+        border-left: 5px solid #FF6F00;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #FF6F00;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 8px;
+        margin-top: 30px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: #e65c00;
+    }
+
+</style>
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB6FV24T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="container">
+    <h1>Thank You! 🎉</h1>
+    <p>Your message has been successfully submitted.</p>
+    <p>We appreciate you taking the time to reach out to us.  
+       Our team will respond soon.</p>
+
+    <div class="details-box" id="userDetails">
+        <!-- User details from the form will appear here -->
+    </div>
+
+    <a href="index.html" class="btn">Back to Home</a>
+</div>
+
+<script>
+    // Function to extract URL parameters
+    function getParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            name: params.get("name"),
+            email: params.get("email"),
+            phone: params.get("phone"),
+            message: params.get("message"),
+        };
+    }
+
+    // Display user details
+    const data = getParams();
+    const box = document.getElementById("userDetails");
+
+    box.innerHTML = `
+        <strong>Submitted Details:</strong><br><br>
+        <strong>Name:</strong> ${data.name || "N/A"}<br>
+        <strong>Email:</strong> ${data.email || "N/A"}<br>
+        <strong>Phone:</strong> ${data.phone || "N/A"}<br>
+        <strong>Message:</strong><br>${data.message || "N/A"}
+    `;
+
+    // Push event to GTM dataLayer for form submission
+    window.dataLayer.push({
+        event: "form_submit_success",
+        user_name: data.name,
+        user_email: data.email
+    });
+</script>
+
+</body>
+</html>
